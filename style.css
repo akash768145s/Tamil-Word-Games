@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #e9ecef;
+    /* Light gray background */
+    color: #333;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    /* Gradient background */
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    position: fixed;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+    /* Expand sidebar on hover */
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar nav button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    color: #bdc3c7;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav button i {
+    margin-right: 10px;
+    /* Space between icon and text */
+    font-size: 1.2rem;
+    /* Adjust icon size */
+}
+
+.sidebar nav button:hover {
+    background-color: #1abc9c;
+    /* Bright hover color */
+    color: #ffffff;
+}
+
+.sidebar nav button.active {
+    background-color: #ff5722;
+    /* Active button color */
+    color: #ffffff;
+}
+
+/* Main Content */
+main {
+    margin-left: 220px;
+    /* Adjusted for sidebar width */
+    padding: 2rem;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover~main {
+    margin-left: 260px;
+    /* Adjust for expanded sidebar */
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Content Section Styling */
+.tab-content h2 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    /* Vibrant blue for headings */
+    margin-bottom: 1rem;
+}
+
+.tab-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Button Reset */
+button {
+    font-family: inherit;
+}
+
+/* Additional Styling for a Polished Look */
+body {
+    overflow-x: hidden;
+}
+
+.tamil-quiz {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #e74c3c;
+    /* Bright red for quiz titles */
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options li {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2c3e50;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.options li:hover {
+    background-color: #f39c12;
+    /* Bright yellow on hover */
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.quiz-summary {
+    font-size: 1.2rem;
+    color: #27ae60;
+    /* Green for summary text */
+}
+
+.tamil-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.options {
+    padding: 0;
+}
+
+.options li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.quiz-summary {
+    text-align: center;
+}
+
+/* Home Section Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Fill the parent container */
+    padding: 2rem;
+    background-color: #f4f4f6;
+    /* Light background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: all 0.3s ease;
+}
+
+.home-container h2 {
+    font-size: 2.5rem;
+    /* Larger font for the title */
+    margin-bottom: 1rem;
+    color: #333;
+    /* Darker text color */
+    text-align: center;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    /* Slightly larger text */
+    margin-bottom: 2rem;
+    /* Spacing below the paragraph */
+    color: #666;
+    /* Gray text for description */
+    text-align: center;
+    /* Center align text */
+}
+
+.start-button {
+    padding: 0.75rem 1.5rem;
+    /* Padding for button */
+    font-size: 1.2rem;
+    /* Increase font size */
+    background-color: #007bff;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Transition effect */
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.scramble-word {
+    margin-bottom: 15px;
+}
+
+.wordsearch-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    gap: 5px;
+}
+
+.wordsearch-grid span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 20px;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.scramble-word {
+    margin: 10px 0;
+}
+
+.crossword-clue {
+    margin: 5px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+        /* Reduce sidebar width */
+    }
+
+    main {
+        margin-left: 180px;
+        /* Adjust main margin */
+        padding: 1rem;
+        /* Reduce padding */
+    }
+
+    .sidebar:hover {
+        width: 200px;
+        /* Slightly larger on hover */
+    }
+
+    .sidebar:hover~main {
+        margin-left: 200px;
+        /* Adjust for expanded sidebar */
+    }
+
+    .home-container h2 {
+        font-size: 2rem;
+        /* Smaller font size */
+    }
+
+    .home-container p {
+        font-size: 1rem;
+        /* Smaller text size */
+    }
+
+    .start-button {
+        font-size: 1rem;
+        /* Smaller button font size */
+    }
+
+    .wordsearch-grid {
+        grid-template-columns: repeat(5, 30px);
+        /* Fewer columns on smaller screens */
+    }
+
+    .tab-content {
+        padding: 10px;
+        /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px;
+        /* Very small sidebar width */
+        position: absolute;
+        /* Make sidebar position absolute */
+    }
+
+    main {
+        margin-left: 100px;
+        /* Adjust main margin */
+    }
+
+    .sidebar:hover {
+        width: 120px;
+        /* Slightly larger on hover */
+    }
+
+    .sidebar:hover~main {
+        margin-left: 120px;
+        /* Adjust for expanded sidebar */
+    }
+
+    .home-container h2 {
+        font-size: 1.5rem;
+        /* Smaller font size for very small screens */
+    }
+
+    .home-container p {
+        font-size: 0.9rem;
+        /* Smaller text size */
+    }
+
+    .start-button {
+        font-size: 0.9rem;
+        /* Smaller button font size */
+        padding: 0.5rem 1rem;
+        /* Reduce button padding */
+    }
+
+    .wordsearch-grid {
+        grid-template-columns: repeat(3, 20px);
+        /* Fewer columns on very small screens */
+    }
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tamil-Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Side Navigation Bar -->
+    <aside class="sidebar">
+      <nav>
+        <button onclick="showTab('home')">
+          <i class="fas fa-home"></i>
+          <span>முதல்பக்கம்</span>
+        </button>
+        <button onclick="showTab('mcq')">
+          <i class="fas fa-question-circle"></i>
+          <span>புலக்கி</span>
+        </button>
+        <button onclick="showTab('wordgame2')">
+          <i class="fas fa-random"></i>
+          <span>சொல் கலப்பு</span>
+        </button>
+        <button onclick="showTab('wordgame3')">
+          <i class="fas fa-brain"></i>
+          <span>நினைவக விளையாட்டு</span>
+        </button>
+        <button onclick="showTab('about')">
+          <i class="fas fa-info-circle"></i>
+          <span>About</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Content Section -->
+    <main>
+      <!-- Home Tab -->
+      <section id="home" class="tab-content active">
+        <div class="home-container">
+          <h2>தமிழ் புலக்கி விளையாட்டிற்கு வரவேற்கிறோம்!</h2>
+          <p>
+            தமிழில் சொற்களை மொழிபெயர்க்கவும், சரியான பதில்களை தேர்வு செய்யவும்!
+          </p>
+        </div>
+      </section>
+
+      <!-- MCQ App Tab (React Component will load here) -->
+      <section id="mcq" class="tab-content">
+        <h2>புலக்கி</h2>
+        <div id="mcq-app"></div>
+      </section>
+
+      <!-- Word Game 2: Word Scramble -->
+      <section id="wordgame2" class="tab-content">
+        <h2>விளையாட்டு 2: சொல் கலப்பில்</h2>
+        <p>இங்கே வார்த்தைகளை குழப்பி, சரியான சொற்களை கண்டுபிடிக்க வேண்டும்.</p>
+        <div id="scramble-container"></div>
+      </section>
+
+      <!-- Word Game 3: Word Search -->
+      <section id="wordgame3" class="tab-content" style="margin-left: 20px">
+        <h2>நினைவக விளையாட்டு</h2>
+        <p>தமிழ் எழுத்துகளின் சரியான ஜோடிகளைப் பொருத்தவும்!</p>
+        <iframe
+          id="wordsearch-frame"
+          src=""
+          style="width: 100%; height: 80vh; border: none"
+        ></iframe>
+      </section>
+
+      <!-- About Tab -->
+      <section id="about" class="tab-content">
+        <h2>About</h2>
+        <p>
+          This app demonstrates HTML, CSS, JavaScript, and React integration.
+        </p>
+      </section>
+    </main>
+
+    <!-- React and Main JavaScript File -->
+    <script src="index.js" defer></script>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </body>
+</html>
